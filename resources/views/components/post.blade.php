@@ -1,7 +1,7 @@
 <div class="post" x-data="{ open: false }">
 
     {{-- post card --}}
-    <div @click="open = true" class="mb-6">
+    <div @click="open = true" class="mb-6 cursor-pointer">
         <h2 class="font-bold text-xl text-gray-900">{{ $post->titre }}</h2>
         <p class="text-gray-800">
             {!! Str::limit($post->contenu, 150) !!}
