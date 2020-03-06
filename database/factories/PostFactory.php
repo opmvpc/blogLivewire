@@ -7,8 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-        'titre' => $faker->catchPhrase,
-        'contenu' => '<p>'. $faker->paragraph($nbSentences = 3, $variableNbSentences = true) .'</p>',
+        'titre' => $faker->catchphrase,
+        'contenu' => $faker->paragraphs($nb = random_int(5, 20), $asText = true),
         'date' => $faker->dateTimeBetween('-5 years', '+0 year'),
     ];
 });

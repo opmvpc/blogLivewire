@@ -22,13 +22,7 @@
     {{-- Liste de posts --}}
     <div class="flex-grow overflow-y-auto">
         @foreach ($posts as $post)
-            <div class="mb-6" x-data>
-                <h2 class="font-bold text-xl text-gray-900">{{ $post->titre }}</h2>
-                <p class="text-gray-800">
-                    {!! Str::limit(nl2br($post->contenu), 150) !!}
-                </p>
-                <span class="text-sm text-gray-700">{{ $post->date->format('\L\e j/m/Y') }}</span>
-            </div>
+            <x-post :post="$post"/>
         @endforeach
     </div>
 

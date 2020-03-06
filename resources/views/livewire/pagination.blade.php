@@ -36,7 +36,7 @@
                             </li>
                         @else
                             <li>
-                                <a wire:click="gotoPage({{ $page }})""
+                                <a wire:click="gotoPage({{ $page }})"
                                    class="cursor-pointer focus:outline-none md:text-xl font-extrabold px-3 py-2 md:px-5 md:py-4 block text-black  border-2 border-r-0 border-black transition duration-300 ease-in-out hover:text-white hover:bg-black focus:outline-none focus:shadow-outline"
                                    aria-label="@lang('pagination.goto_page', ['page' => $page])"
                                 >
